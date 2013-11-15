@@ -50,6 +50,7 @@ public class NumberPickerPreference extends DialogPreference {
         super.onDialogClosed(positiveResult);
 
         final int origValue = getValue();
+        mPicker.clearFocus();
         final int curValue = mPicker.getCurrent();
 
         if (positiveResult && (curValue != origValue)) {
